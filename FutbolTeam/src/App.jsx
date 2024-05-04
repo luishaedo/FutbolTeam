@@ -1,10 +1,19 @@
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Home, Landing } from "./components/Views/index";
+import Navbar from "./components/NavBar/navbar";
 
 function App() {
   return (
+    <div className="App">
     <>
-      <h1>Percy</h1>
+      <Navbar />
+      <Routes>
+        <Route path={"/"} element={<Landing />} />
+        <Route path={"/home"} element={<Home />} />
+      </Routes>
     </>
+    </div>
   );
 }
 
