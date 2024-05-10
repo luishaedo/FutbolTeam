@@ -3,12 +3,13 @@ import Cards from "../../Cards/cards";
 import equipo from "../../../assets/bdd";
 
 const Home = () => {
-
+  
 
   return (
     <div className={styles.homeContainer}>
       <div className={styles.cardsContainer}>
-          <Cards jugadores={equipo} />
+        
+          <Cards equipo={equipo} />
       </div>
     </div>
   );

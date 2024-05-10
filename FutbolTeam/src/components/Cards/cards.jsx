@@ -1,10 +1,10 @@
 import Card from "../Card/card";
 import styles from "./cards.module.css";
 
-const Cards = ({ jugadores }) => {
+const Cards = ({ equipo }) => {
   return (
     <div className={styles.cardsContainer}>
-      {jugadores?.map((jugador) => (
+      {equipo?.map((jugador) => (
         <Card
           key={jugador.id}
           id={jugador.id}
