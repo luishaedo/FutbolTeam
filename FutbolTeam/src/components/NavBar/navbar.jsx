@@ -97,8 +97,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>PERFIL</MenuItem>
+      <MenuItem onClick={handleMenuClose}>CUENTA</MenuItem>
     </Menu>
   );
 
@@ -125,7 +125,7 @@ export default function PrimarySearchAppBar() {
             <MailIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>MENSAJES</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -137,7 +137,7 @@ export default function PrimarySearchAppBar() {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>NOTIFICACIONES</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -149,7 +149,7 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>PERFIL</p>
       </MenuItem>
     </Menu>
   );
