@@ -15,7 +15,7 @@ export const getJugadores = () => {
       // const response = await axios.get("http://localhost:3001/jugadores");
       // const jugadores = response.data;
 
-      const jugadores = equipo
+      const jugadores = equipo;
 
       dispatch({ type: GET_JUGADORES, payload: jugadores });
     } catch (error) {
@@ -27,36 +27,36 @@ export const getJugadores = () => {
   };
 };
 
-export const getJugadoresByNombre = (nombre) =>{
-    return async function (dispatch) {
-        try{
-            const response = await axios.get(
-                `http://localhost:3001/jugadores/?nombre=${nombre}`
-            );
-            const jugadores = response.data;
-            dispatch({ type: GET_JUGADOR_BY_NOMBRE, payload: jugadores});
-        } catch (error) {
-            dispatch({
-                type:ERROR,
-                payload: error.message,
-            });
-        }
-    };
+export const getJugadoresByNombre = (nombre) => {
+  return async function (dispatch) {
+    try {
+      const response = await axios.get(
+        `http://localhost:3001/jugadores/?nombre=${nombre}`
+      );
+      const jugadores = response.data;
+      dispatch({ type: GET_JUGADOR_BY_NOMBRE, payload: jugadores });
+    } catch (error) {
+      dispatch({
+        type: ERROR,
+        payload: error.message,
+      });
+    }
+  };
 };
 
-export const getJugadoresById = (id) =>{
-    return async function (dispatch) {
-        try{
-            const response = await axios.get(`http://localhost:3001/jugadores/${id}`);
-            const jugador = response.data;
-            dispatch({type:GET_JUGADOR_BY_ID, payload:jugador});
-        } catch (error) {
-            dispatch({
-                type:ERROR,
-                payload:error.message,
-            });
-        }
-    };
+export const getJugadoresById = (id) => {
+  return async function (dispatch) {
+    try {
+      const response = await axios.get(`http://localhost:3001/jugadores/${id}`);
+      const jugador = response.data;
+      dispatch({ type: GET_JUGADOR_BY_ID, payload: jugador });
+    } catch (error) {
+      dispatch({
+        type: ERROR,
+        payload: error.message,
+      });
+    }
+  };
 };
 
 // export const postJugador = (jugador) => {

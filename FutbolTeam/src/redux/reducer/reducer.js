@@ -6,7 +6,6 @@ import {
   // POST_JUGADOR,
 } from "../actions/actionsTypes";
 
-
 const initialState = {
   resultados: [],
   copiaResultados: [],
