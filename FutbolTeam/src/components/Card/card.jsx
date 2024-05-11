@@ -17,8 +17,13 @@ export default function MediaCard({
   logros,
 }) {
     const imageSrc = imagen ? imagen : 'https://hips.hearstapps.com/hmg-prod/images/muere-maradona-1606326764.jpg?crop=0.845xw:1.00xh;0.0783xw,0&resize=640:*';
+   
+    const handleClick = () => {
+      navigate(`/detail/${props.id}`);
+    };
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card onClick={handleClick} sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{height: 0, paddingTop: '100%', position: 'relative'}}
         image={imageSrc} // Aquí usamos la prop imagen que pasamos al componente
